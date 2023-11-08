@@ -19,14 +19,12 @@ const App = () => {
         }
       })
   }
-  console.log(movies)
-  console.log(error)
   return (
     <div>
       {/* Do not remove the main div */}
       <form action="">
         <input type="text" value={searchTerm} onChange={e => setSearchTerm(e.target.value)} />
-        <button onClick={searchMovies} >Search</button>
+        <button type="button" onClick={searchMovies} >Search</button>
       </form>
       {
         error ?

@@ -24,11 +24,13 @@ const App = () => {
   return (
     <div>
       {/* Do not remove the main div */}
-      <input type="text" value={searchTerm} onChange={e => setSearchTerm(e.target.value)} />
-      <button onClick={searchMovies} >Search</button>
+      <form action="">
+        <input type="text" value={searchTerm} onChange={e => setSearchTerm(e.target.value)} />
+        <button onClick={searchMovies} >Search</button>
+      </form>
       {
         error ?
-          <h1 className="error" >Invalid movie name</h1>
+          <h1 className="error" >Invalid movie name. Please try again.</h1>
           :
           <ul>
             {
